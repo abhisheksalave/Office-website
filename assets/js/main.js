@@ -1,10 +1,4 @@
-/**
-* Template Name: Sailor
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -182,3 +176,84 @@
   }
 
 })()
+
+
+
+
+
+  const counters = [
+    { counterElement: 'counter1', randomNumber: 200, triggered: false },
+    { counterElement: 'counter2', randomNumber: 204, triggered: false },
+    { counterElement: 'counter3', randomNumber: 245, triggered: false },
+    { counterElement: 'counter4', randomNumber: 400, triggered: false }
+
+  ];
+
+  function checkIfElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function updateCounter(counterObj) {
+    if (counterObj.triggered) return;
+
+    const counterElement = document.getElementById(counterObj.counterElement);
+
+    let count = 0;
+
+    function incrementCounter() {
+      count++;
+      counterElement.textContent = count;
+      if (count === counterObj.randomNumber) {
+        counterObj.triggered = true;
+        clearInterval(counterInterval);
+      }
+    }
+
+    const counterInterval = setInterval(incrementCounter, 10);
+  }
+
+  window.addEventListener('scroll', function() {
+    counters.forEach(counterObj => {
+      const counterElement = document.getElementById(counterObj.counterElement);
+      if (checkIfElementInViewport(counterElement)) {
+        updateCounter(counterObj);
+      }
+    });
+  });
+
+
+
+
+
+// const counters = [
+//   { counterElement: 'counter1', randomNumber:200},
+//   { counterElement: 'counter2',randomNumber:204 },
+//   { counterElement: 'counter3',randomNumber:245 }
+//   // Add more counters as needed
+// ];
+
+// counters.forEach(counterObj => {
+//   const counterElement = document.getElementById(counterObj.counterElement);
+
+//   let count = 0;
+
+//   function updateCounter() {
+//       count++;
+//       counterElement.textContent = count;
+//       if (count === counterObj.randomNumber) {
+//           clearInterval(counterInterval);
+//       }
+//   }
+//   // function updateCounter() {
+//   //     const randomNumber = counterObj.randomNumber;
+//   //     counterElement.textContent = randomNumber;
+//   // }
+
+//   const counterInterval = setInterval(updateCounter, 10); // Adjust the interval for your preference
+// });
