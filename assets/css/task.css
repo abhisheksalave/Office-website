@@ -549,7 +549,7 @@ section {
   }
   .diagonal img{
     position: absolute;
-    bottom: -140px;
+    bottom: -170px;
   }
   .why-choose-section{
     padding: 53px;
@@ -574,4 +574,8 @@ section {
   }
   .last-img .img-2{
     width: 67px;
+  }
+  .xyz{
+    transform: rotate3d(0,0,1,45);
+
   }
