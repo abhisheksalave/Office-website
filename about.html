@@ -30,6 +30,192 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://esm.sh/gsap"></script>
 
+  <style>
+    .banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* .videocontainer {
+      position: relative;
+      width: 100%;
+      padding-bottom: 27.25%;
+      overflow: hidden;
+    } */
+
+    .videoembed {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-title {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .banner-title h2 {
+      color: #214b76;
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    /* small caption - optional */
+    .caption {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+    .services .box {
+	background-color:#12141c;
+	overflow:hidden;
+	transition: .3s ease;
+}
+.services .box i {
+	color:#f26c4f;
+	transition:inherit;
+	transition-delay: 0s
+}
+.services h4 {
+	color:#fff;
+	transition:inherit;
+	transition-delay: .05s;
+}
+.services p {
+	color:#dfdfdf;
+	transition:inherit;
+	transition-delay: .1s;
+}
+.readmore {
+	color:#fff;
+	overflow: hidden;
+    display: inline-block;
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    padding-right: 2rem;
+}
+.readmore:before {
+	animation: ts-link-arrow-effect-animation-out;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.6, .01, 0, 1);
+    background-color: #f26c4f;
+    bottom: 0;
+    height: .125rem;
+    margin: auto;
+    left: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scaleX(.2);
+    transform-origin: left center;
+    z-index: 0;
+}
+.readmore span {
+	position: relative;
+    transform: translateX(-200%);
+    display: inline-block;
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.box:hover .readmore span {
+    transform: translateX(0%);
+}
+.box:hover .readmore:before {
+	animation: ts-link-arrow-effect-animation-in;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.6, .01, 0, 1);
+}
+.box:hover i,
+.box:hover h4,
+.box:hover p {
+    transform: translateY(-0.625rem);
+}
+@keyframes ts-link-arrow-effect-animation-out {
+    0% {
+        transform-origin: right center;
+        transform: scaleX(.2);
+    }
+
+    70% {
+        transform-origin: right center;
+    }
+
+    71% {
+        transform-origin: left center;
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform-origin: left center;
+        transform: scaleX(.2);
+    }
+}
+@keyframes ts-link-arrow-effect-animation-in {
+    0% {
+        transform-origin: left center;
+        transform: scaleX(.2);
+    }
+
+    70% {
+        transform-origin: left center;
+        transform: scaleX(1);
+    }
+
+    71% {
+        transform-origin: right center;
+    }
+
+    100% {
+        transform-origin: right center;
+        transform: scaleX(.2);
+    }
+}
+
+
+
+
+
+
+
+
+.section_title {
+  margin-bottom: 40px;
+}
+
+.section_title h2 {
+  color: #333333;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+
+
+  </style>
 </head>
 
 <body>
@@ -67,13 +253,9 @@
               </li>
             </ul>
           </li>
-          
-          
-          <li><a href="">Enquiry</a></li>
-          <li><a href=""></a></li>
+          <li><a href="Enquiry.html">Enquiry</a></li>
           <li><a href="#">Vacancy</a></li>
-
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html" class="getstarted">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -84,26 +266,151 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>About</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>About</li>
-          </ol>
+    <!-- =======Start Video Section  ======= -->
+    <div class="container-fluid p-0 m-0">
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="banner">
+          <div class="videocontainer">
+            <video class="videoembed" autoplay muted loop>
+              <source src="assets/video/ved-3.webm" type="video/mp4">
+            </video>
+            <div class="banner-title">
+              <div class="container">
+                <h2 data-caption-animate="fadeInUpSmall" class="fadeInUpSmall animated">Built by IMAGEbytes Pvt Ltd</h2>
+                <h5 class="text-width-2 block-centered fadeInUpSmall animated text-white fw-bold" data-caption-animate="fadeInUpSmall" data-caption-delay="200">Seamless comparison and navigation between current and prior studies</h5>
+                <div class="group-lg group-middle">
+                  <a class="btn btn-dark fadeInUpSmall animated" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#section-see-features" data-custom-scroll-to="section-see-features">See Features</a>
+                  <a class="btn btn-primary fadeInUpSmall animated" data-caption-animate="fadeInUpSmall" data-caption-delay="350" data-custom-scroll-to="section-subscribe" href="#section-subscribe">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
+      </section>
+    </div>
+  
+    <!-- End Video Section -->
 
     <!-- ======= About Section ======= -->
-     
+     <div class="container about-section-container  ">
+      <div class="row ">
+       <div class="col-sm-12 col-xs-12 col-md-4 p-2 company-intro">
+        <h3 class="pb-3">IMAGEbytes Private Limited</h3>
+        <p>
+          A SOFTWARE PRODUCT & SERVICES COMPANY FOCUSED IN RADIOLOGY IMAGING CLINICAL AND BUSINESS WORKFLOW
+          IMAGEbytes PACS® SOFTWARE A COMPELETE DIGITAL WORKFLOW PRODUCT FOR XRAY/CT/MRI/USG IMAGE ACCESS AND REPORT DISPATCH TO PATIENTS AND CONSULTANTS AT MULTISPECIALTY HOSPITALS & DIAGNOSTIC SCAN CENTERS
+           IMAGEbytes.in | Cloud remote tele-reporting SOFTWARE solution for CONSULTANT RADIOLOGIST
+        </p>
+       </div>
+       <div class="col-sm-12 col-xs-12 col-md-4 d-flex justify-content-center CEO-img">
+        <img src="assets/img/clients/halfpic-removebg-preview.png" class="w-75" alt="img">
+       </div>
+       <div class="col-sm-12 col-xs-12 col-md-4 p-2 self-intro  ">
+        <p>
+          <span class="name-ceo"> I'm Mr. Anand Arora,</span> 
+          a leader in Healthcare IT for over three decades. With 19 years 
+          specializing in the healthcare Imaging domain, I steer teams to 
+          refine radiology imaging products, addressing customer needs and 
+          elevating patient care. My active engagement with radiologists 
+          and diagnostic centers ensures a nuanced understanding of evolving 
+          imaging requirements. In the dual role of CMD and CTO, I champion 
+          innovation, envisioning a future where technology seamlessly 
+          integrates with healthcare. Beyond a career, it's a passion to 
+          drive this transformative change. For inquiries or discussions, 
+          feel free to contact me at <a href="mailto:sales@imagebytes.co.in">sales@imagebytes.co.in</a>. Here's to the 
+          exciting journey ahead in Healthcare IT.
+        </p>
+        <div class="team p-0">
+           <div class="member p-0 align-items-center">
+            <div class="social">
+               <a href=""><i class="ri-twitter-fill"></i></a>
+               <a href=""><i class="ri-facebook-fill"></i></a>
+               <a href=""><i class="ri-instagram-fill"></i></a>
+               <a href="https://www.linkedin.com/in/imagebytesdotin/"> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+           </div>
+         </div>
+       </div>
+      </div>
+     </div>
   
 
     <!-- End About Section -->
+
+
+  
+    <!-- Our section start here  -->
+    <div class="services mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section_title text-center">
+              <h2>Our Services</h2>
+            </div>
+           </div>
+         
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="box p-5"> 
+              <i class="fas fa-mouse fa-3x mb-4"></i>
+              <h4>Cloud PACS</h4>
+              <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+              <a class="readmore" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="box p-5"> 
+              <i class="fas fa-camera-retro fa-3x mb-4"></i>
+              <h4>Departmental PACS</h4>
+              <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+              <a class="readmore" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="box p-5"> 
+              <i class="fab fa-youtube  fa-3x mb-4"></i>
+              <h4>12*7 Hr Support </h4>
+              <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+              <a class="readmore" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="box p-5"> 
+              <i class="fas fa-pencil-alt fa-3x mb-4"></i>
+              <h4>Web Design</h4>
+              <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+              <a class="readmore" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="box p-5"> 
+              <i class="fas fa-laptop-code fa-3x mb-4"></i>
+              <h4>Coding</h4>
+              <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+              <a class="readmore" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="box p-5"> 
+              <i class="fas fa-mobile-alt fa-3x mb-4"></i>
+              <h4>App Developing</h4>
+              <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+              <a class="readmore" href="#"><span>Read More</span></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- our section end here  -->
+
+
+
+
+
+
+
+
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -357,5 +664,20 @@
       backSpeed: 40,
       loop: true,
   });
+
+  $(document).ready(function() {
+  $('.circle-container').find('a').click(function(event) {
+    event.preventDefault();
+  });
+  $('.circle-container').find('li').hover(function() {
+    $('.circle-container').find('li').removeClass('active');
+    $(this).addClass('active');
+    $('.services-container').find('li.active').removeClass('active animated fadeIn');
+
+    $(".services-container").find('li').eq($(this).data('id')).addClass('active animated fadeIn');
+
+  });
+
+});
 </script>
 </html>
