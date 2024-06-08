@@ -8,41 +8,107 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/task.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <title>Document</title>
 </head>
 <style>
-  .main {
-    height: 200px; /* Set a fixed height for the .main div */
-    overflow: hidden; /* Hide content that overflows the fixed height */
-  }
 
-  .scrollable-content {
-    height: 100%; /* Take up the full height of the parent */
-    overflow: auto; /* Enable scrolling for overflowing content */
-  }
 </style>
 
 <body> 
-  <div class="main">
-    <table>
-      <tbody>
-        <tr>
-          <td class="scrollable-content">
-            <div>
-            <p>It is a long established fact that a reader will be distracted by the readable 
-              content of a page when looking at its layout. The point of using Lorem Ipsum is 
-              that it has a more-or-less normal distribution of letters, as opposed to using 
-              'Content here, content here', making it look like readable English. Many desktop 
-              publishing packages and web page editors now use Lorem Ipsum as their default model text, 
-              and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-               Various versions have evolved over the years, sometimes by accident, sometimes on 
-               purpose (injected humour and the like).</p>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+
+  <body>
+    <div class="container">
+      <h1>Bootstrap UI Coding Standards</h1>
+      
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown Button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <!-- Comment: Dropdown component used for displaying a dropdown menu -->
+  
+      <!-- Button -->
+      <button type="button" class="btn btn-primary">Primary Button</button>
+      <!-- Comment: Primary button used for primary actions -->
+  
+      <!-- Popover -->
+      <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Popover Button</button>
+      <!-- Comment: Button triggering a popover for additional information -->
+  
+      <!-- Alert -->
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        This is a warning alert.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <!-- Comment: Alert for displaying important information -->
+  
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Comment: Table for displaying tabular data -->
+  
+      <!-- Button inside Button -->
+      <button type="button" class="btn btn-primary">
+        Main Button
+        <button type="button" class="btn btn-secondary">Nested Button</button>
+      </button>
+      <!-- Comment: Nested button inside a primary button -->
+  
+      <!-- Grid System -->
+      <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+      </div>
+      <!-- Comment: Grid system for creating responsive layouts -->
+  
+      <!-- Flexbox -->
+      <div class="d-flex">
+        <div class="flex-grow-1">Flex item 1</div>
+        <div class="flex-grow-1">Flex item 2</div>
+      </div>
+      <!-- Comment: Flexbox for flexible layout design -->
+  
+      <!-- Color Formatting for Button -->
+      <button type="button" class="btn btn-primary" style="background-color: #ff0000;">Custom Color Button</button>
+      <!-- Comment: Custom color formatting applied to a button -->
+  
+    </div>
+  
+    <!-- Bootstrap JavaScript (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom scripts here -->
+  </body>
+
+  
 </body>
 
 </html>
